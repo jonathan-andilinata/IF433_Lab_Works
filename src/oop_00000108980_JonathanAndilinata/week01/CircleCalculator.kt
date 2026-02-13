@@ -1,5 +1,6 @@
 package oop_00000108980_JonathanAndilinata.week01
 
+
 fun main (array: Array<String>){
     var radius: Double = 7.0
     var pi: Double = 3.14
@@ -20,3 +21,4 @@ fun checkSize(area: Double){
         println("This is a small circle")
     }
 }
+
