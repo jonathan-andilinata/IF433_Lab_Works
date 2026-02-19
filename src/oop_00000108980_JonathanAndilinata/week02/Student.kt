@@ -3,7 +3,7 @@ package oop_00000108980_JonathanAndilinata.week02
 class Student(
     val name: String,
     val nim: String,
-    val major: String
+    var major: String
 ) {
     init {
         if (nim.length != 5) {
@@ -13,4 +13,9 @@ class Student(
             println("Log: Objek student $name berhasil dialokasikan ke memory")
         }
     }
+
+    constructor(name: String, nim: String) : this(name,nim, "Non-Matriculated"){
+        println("LOG: Menggunakan constructor jalur umum (tanpa jurusan)")
+    }
+
 }
