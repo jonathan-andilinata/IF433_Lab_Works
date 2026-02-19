@@ -2,7 +2,7 @@ package oop_00000108980_JonathanAndilinata.week02
 
 import java.util.Scanner
 
-fun main(){
+fun main() {
     val scanner = Scanner(System.`in`)
     println(" --- Aplikasi PMB UMN ---")
 
@@ -16,8 +16,8 @@ fun main(){
 
     if (nim.length != 5) {
         println("Error: Pendaftaran dibatalkan. NIM harus 5 karakter")
-    }
-    else{
+
+    } else {
         print("Masukkan Jurusan: ")
         val major = scanner.nextLine()
 
