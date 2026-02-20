@@ -8,4 +8,9 @@ fun main() {
     println("${player2.damage},${player2.tiers}")
     println("${player3.damage},${player3.tiers}")
 
+    val person = Player("John",50)
+    person.xp
+    person.addXp(50)
+    person.addXp(60)
+
 }
