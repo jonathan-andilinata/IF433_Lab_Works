@@ -8,8 +8,6 @@ fun main(){
 
     e.incresePerformance()
 
-    //e.perfomanceRating = 5
-
     println("Pajak yang harus dibayar: ${e.tax}")
 
 }
