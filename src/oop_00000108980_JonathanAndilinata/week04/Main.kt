@@ -16,4 +16,12 @@ fun main(){
     electric.accelerate()
     electric.honk()
     electric.openTrunk()
+
+    val asep = Manager("asep",20)
+    asep.work()
+    println(asep.calculateBonus())
+
+    val timun = Developer("timun",10, "java")
+    timun.work()
+    println(timun.calculateBonus())
 }
