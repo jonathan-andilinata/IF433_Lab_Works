@@ -1,6 +1,6 @@
 package oop_00000108980_JonathanAndilinata.week04
 
-class Employee (
+open class Employee (
     val name: String,
     val baseSalary: Int
 ){
