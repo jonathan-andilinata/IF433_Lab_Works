@@ -9,7 +9,6 @@ fun main() {
     println("${player3.damage},${player3.tiers}")
 
     val person = Player("John",50)
-    person.xp
     person.addXp(50)
     person.addXp(60)
 
