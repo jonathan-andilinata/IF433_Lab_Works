@@ -7,7 +7,14 @@ fun main() {
     val daftarOrang: List<PaymentMethod> = listOf(orang,manusia)
 
     for (method in daftarOrang){
-        method.processPayment(75000.0)
+        when (method){
+            is EWallet -> {
+                method.processPayment(75000.0)
+            }
+            is CreditCard ->{
+                method.processPayment(75000.0)
+            }
+        }
     }
 
 }
