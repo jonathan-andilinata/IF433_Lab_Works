@@ -1,4 +1,5 @@
 package oop_00000108980_JonathanAndilinata.week07
 
-class Main {
+fun main (){
+    val client = NetworkClient("(Https://api.umn.ac.id)")
 }
