@@ -11,7 +11,7 @@ class Weapon private constructor(val item: GameItem, val durability: Int) {
 
         fun forgeEpicSword(): Weapon{
             val pedang = GameItem("Pedang Kayu Cahaya",25, ItemRarity.EPIC)
-            return Weapon(pedang,50)
+            return Weapon(pedang,200)
         }
     }
 }
