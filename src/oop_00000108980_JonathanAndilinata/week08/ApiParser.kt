@@ -1,0 +1,22 @@
+package oop_00000108980_JonathanAndilinata.week08
+
+class ApiParser{
+    fun parseProduct( rawJson: Map <String, Any?>): Product?{
+        val Id = requireNotNull(rawJson["id"]){"API Invalid: ID missing"}
+        val Name = requireNotNull(rawJson["name"]){"API Invalid: Name missing"}
+
+        val type = rawJson["type"] as? String
+
+       return when (type) {
+            "Electronic" -> {
+                val warranty = rawJson["warranty"] as? Int?: 12
+                Product.Electronic(Id.toString(), Name.toString(), warranty )
+            }
+            "Clothing" -> {
+                val size = rawJson["size"] as? String?: "All Size"
+                Product.Clothing(Id.toString(), Name.toString(), size)
+            }
+            else -> null
+        }
+    }
+}
