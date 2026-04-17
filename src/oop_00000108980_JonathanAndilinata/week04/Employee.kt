@@ -1,16 +1,11 @@
 package oop_00000108980_JonathanAndilinata.week04
 
-open class Employee (
-    val name: String,
-    val baseSalary: Int
-){
+open class Employee(val name: String, val baseSalary: Int){
     open fun work(){
-        println("$name sedang bekerja")
+        println("$name is working")
     }
 
-    open fun calculateBonus(): Int {
-        val bonus = baseSalary * 0.10
-        return bonus.toInt()
+    open fun calculatedBonus(): Int {
+        return baseSalary * 10/100
     }
-
 }

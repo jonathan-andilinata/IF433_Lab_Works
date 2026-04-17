@@ -2,7 +2,6 @@ package oop_00000108980_JonathanAndilinata.week02
 
 import java.util.Scanner
 
-import java.util.Random
 
 fun main(){
     val scanner = Scanner (System.`in`)
@@ -46,7 +45,6 @@ fun main(){
         else if (!player.isAlive()){
             println("You lose")
         }
-
     }
 }
 

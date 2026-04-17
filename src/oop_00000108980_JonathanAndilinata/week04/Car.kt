@@ -8,6 +8,7 @@ open class Car(brand: String, val numberOfDoors: Int): vehicle(brand) {
 
     override fun honk() {
         println("TIN TIN! mobil $brand lewat")
+
     }
 
     override fun accelerate(){

@@ -1,29 +1,25 @@
 package oop_00000108980_JonathanAndilinata.week03
 
-class Weapon (
-   val name: String,
-    var damages: Int
-) {
-    var damage: Int = damages
-        set(value){
-          if (damages < 0){
-              println("Damage Weapom di set negatif, akan ada masalah nanti!")
-              field = 100
-          }
-          else if (damages > 1000){
-              println("Damage tidak boleh lebih dari 1000, di set ke 1000")
-              field = 1000
-          }
+class Weapon(name: String, damage: Int, tier: String) {
+    var serangan: Int = damage
+        set(value) {
+            if (value <= 0) {
+                println("Damage di setting ke negatif! nilai ubah menjadi yang lama")
+            } else if (value > 1000) {
+                println("damage lebih dari 1000! di set ke 100")
+                field = 1000
+            } else {
+                field = value
+            }
         }
-    init{
-        damage = damages
-    }
-
-    val tiers: String
-        get() = when {
-            damage > 800 -> "Legendary"
-            damage > 500 -> "Epic"
-            else -> "Common"
-
-      }
+    var tiers: String = tier
+        get(){
+             if (serangan >= 800){
+                return "legendary"
+            } else if(serangan >= 500){
+                return "epic"
+            } else{
+                return "common"
+            }
+        }
 }

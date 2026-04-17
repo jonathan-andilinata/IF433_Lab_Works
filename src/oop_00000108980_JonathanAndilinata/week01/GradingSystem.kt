@@ -18,10 +18,9 @@ fun main (){
 
     val studentId : String? = null
 
-    val idLenght = studentId?.length ?: 0
+    val idLength = studentId?.length ?: 0
 
-    println("Panjang ID: $idLenght")
-
+    println("Panjang ID: $idLength")
 }
 
 fun calculateStatus(score: Int) = if (score > 75) "lulus" else "Tidak lulus"

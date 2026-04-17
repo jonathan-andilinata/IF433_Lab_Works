@@ -1,21 +1,30 @@
 package oop_00000108980_JonathanAndilinata.week01
 
-fun main() {
-    val gameTitle = "Ayams"
-    val price = 10000
-
-    printReceipt(gameTitle,price, CalculatedDiscount(price))
-
+fun main(){
+val gameTitle = "Ayams"
+val price = 10000
     val userNote: String? = null
 
-    var Length = userNote?.length?: "tidak ada catatan"
+val discount = CalculatedDiscount(price)
 
-    print(Length)
+printReceipt(gameTitle, discount, userNote)
+
+val Length = userNote?.length?: "tidak ada catatan"
+
+print(Length)
 
 }
 
-fun CalculatedDiscount (price : Int) : Int  = if (price > 50000) price * 2/10 else price * 1/10
+fun CalculatedDiscount (price : Int) : Int{
+    if (price > 50000) {
+        return price * 2/10
+    }
+    else {
+       return price * 1/10
+    }
+}
 
-fun printReceipt( title: String, FinalPrice: Int, discount: Int){
-   println("Judul: $title,  Final Price: $FinalPrice, Setelah diskon: $discount")
+fun printReceipt(title: String, FinalPrice: Int, note: String? = null) {
+    println("$title, $FinalPrice")
+    val nota = note ?: "tidak ada catatan"
 }
