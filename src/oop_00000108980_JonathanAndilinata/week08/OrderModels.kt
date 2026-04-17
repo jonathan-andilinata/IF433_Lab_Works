@@ -3,4 +3,4 @@ package oop_00000108980_JonathanAndilinata.week08
 class City(val name: String)
 class Address(val city: City?)
 class DeliveryDetails(val address: Address?)
-class order (val deliveryDetails: DeliveryDetails?, val totalPrice: Int?)
+class Order (val deliveryDetails: DeliveryDetails?, val totalPrice: Int?)
