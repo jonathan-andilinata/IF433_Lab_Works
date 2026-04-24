@@ -13,5 +13,6 @@ fun main(){
     val winningTrades = closedTrades.filter{it.roe > 0}
     val losingTrades = closedTrades.filter{it.roe <= 0}
     val topPerformerString = winningTrades.sortedByDescending { it.roe }.map{"WIN [BTCUSDT - LONG]: +15.5% ROE (Lev: 20x)"}
+    val worstPerformersString = losingTrades.sortedBy { it.roe }.map{"LOSS [ETHUSDT - SHORT]: -5.2% ROE (Lev: 10x)"}
 
 }
