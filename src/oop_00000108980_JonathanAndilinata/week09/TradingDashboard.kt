@@ -20,8 +20,8 @@ fun main(){
 
     println("=== CRYPTO TRADING DASHBOARD ===")
 
-    worstPerformersString.forEach{loss ->
-        println(loss)
+    worstPerformersString.forEach{los ->
+        println(los)
     }
     println("Unique pairs: $uniquePairs")
 
