@@ -7,4 +7,5 @@ fun main(){
 
     println("Isi intBox: ${intBox.value}")
     println("Isi stringBox: ${stringBox.value}")
+
 }
