@@ -35,5 +35,9 @@ fun main() {
         val result = it.diagnose()
         print(result)
     }
+    println("\n===dengan menggunakan with===")
+    with(homeDevices){
+        println(this.size)
+    }
 
 }
