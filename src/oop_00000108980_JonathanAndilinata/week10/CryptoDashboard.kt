@@ -13,6 +13,6 @@ fun main(){
     }
 
     val txRepo = WalletRepository<Transaction>()
-    txRepo.add(Transaction("BTC",1.0))
+    txRepo.add(Transaction("ETH",0.8))
 
 }
