@@ -44,4 +44,9 @@ fun main() {
         println("Total Power: ${sumOf { it.powerLoad }}")
     }
 
+    homeDevices.forEach { devices ->
+        val result = devices.diagnose()
+        print("\n $result")
+    }
+
 }
