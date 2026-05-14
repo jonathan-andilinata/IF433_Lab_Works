@@ -1,6 +1,6 @@
 package oop_00000108980_JonathanAndilinata.week10
 
-class WalletRespitory<T : Any>() {
+class WalletRepository<T : Any>() {
     private val items = mutableListOf<T>()
 
     fun add(item: T){
