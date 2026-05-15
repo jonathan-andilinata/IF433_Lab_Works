@@ -34,5 +34,8 @@ fun main(){
         dispenseKibble(30,1000,false)
     }.onSuccess { newStock ->
         currentKibbleStock = newStock
-        println("Makan sore sukses! Sisa stok kibblr: $currentKibbleStock") }
+        println("Makan sore sukses! Sisa stok kibblr: $currentKibbleStock") }.onFailure { error ->
+            println("Peringatan ke Pemilik: ${error.message}")
+            println("(Opsional: Berikan chicken jerky secara manual)")
+    }
 }
