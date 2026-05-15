@@ -4,4 +4,7 @@ fun dispenseKibble(requestedGram: Int, avaiableGram: Int, isJammed: Boolean): In
     require(requestedGram > 0){
         "Porsi kibble harus lebih dari 0 gr"
     }
+    if (isJammed) {
+        throw DispenserJamException()
+    }
 }
