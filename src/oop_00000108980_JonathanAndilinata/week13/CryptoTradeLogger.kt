@@ -18,7 +18,7 @@ fun fromCsvTrade(line: String): TradeRecord? {
 }
 
 fun saveTrades(trades: List<TradeRecord>,path: String){
-   val write = File(path).printWriter().use{ writer ->
+   File(path).printWriter().use{ writer ->
         for (trade in trades) {
             writer.println(trade.toCsv())
         }
@@ -42,5 +42,7 @@ fun main(){
     saveTrades(trade,"crypto_trades.csv")
     File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
     val loadedData = loadTrades("crypto_trades.csv")
-    loadedData.sumOf{it.pnl}
+    val totalPnl = loadedData.sumOf{it.pnl}
+
+    println("==== TOTAL Pnl BERSIH: $totalPnl ===")
 }
